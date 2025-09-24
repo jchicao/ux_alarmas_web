@@ -219,7 +219,7 @@ a{
         .alarma {
             width: 100%; 
             height: 150px;
-            background-color: #18c5db;
+            background-color: #3AB8C4;
             display: flex;
             justify-content: top;
             align-items: left;
@@ -418,8 +418,15 @@ p {
     width: 360px;
     background: white;
     padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .lista-personas2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 360px;
+    background: white;
+    padding: 15px;
   }
   
   .persona {
@@ -503,7 +510,7 @@ p {
 .invitacion .alarma {
   width: 30%; 
   height: 150px;
-  background-color: #18c5db;
+  background-color: #3AB8C4;
   display: flex;
   justify-content: top;
   align-items: left;
@@ -521,7 +528,7 @@ p {
   display: flex;
   justify-content: center; 
   align-items: center;     
-  background: #18c5db;
+  background: #3AB8C4;
   width: 157px;
   height: 30px; 
   color: #0D3B66;
@@ -568,12 +575,21 @@ p {
 }
 
 
-/* Botón crear alarmas colectivas centrado */
+
 #crear-colectivas {
   margin-top: 50px;
   display: flex;
   justify-content: center;
 }
+
+input[type="date"].cuerpo {
+  font-family: 'Roboto Condensed';
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  color: #0D3B66;
+}
+
 
 /* Fin Diagramación */
   
