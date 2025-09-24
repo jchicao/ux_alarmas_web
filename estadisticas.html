@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestor de Alarmas</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="text/javascript" src="js/web.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    <!-- Barra superior -->
+    <div id="header">
+      <div id="menu">
+        <a href="reportes.html" class="encabezado">Reportes</a>
+        <a href="crear.html" class="encabezado">Crear alarmas</a>
+        <a href="sincronizar.html" class="encabezado">Sincronizar alarmas</a>
+        <a href="control.html" class="encabezado">Control parental</a>
+      </div>
+      <div id="usuario" class="encabezado">Alejandro</div>
+    </div>
+
+      <!-- Contenido -->
+    <div id="contenedor-estadisticas">
+      <div class="bloque-superior">
+        <div class="grafico-alarmas">
+          <canvas id="frecuenciaAlarmas"></canvas>
+        </div>
+    
+        <div class="tabla-alarmas">
+          <table>
+            <thead>
+              <tr class="cuerpo">
+                <th>Nombre</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Pospuesto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="cuerpo"><td>Despertar</td><td>14/09/2025</td><td>07:00</td><td>No</td></tr>
+              <tr class="cuerpo"><td>Gimnasio</td><td>15/09/2025</td><td>08:15</td><td>Sí</td></tr>
+              <tr class="cuerpo"><td>Cita médica</td><td>16/09/2025</td><td>06:45</td><td>No</td></tr>
+              <tr class="cuerpo"><td>Pedir domicilio</td><td>17/09/2025</td><td>09:30</td><td>No</td></tr>
+              <tr class="cuerpo"><td>Clase</td><td>18/09/2025</td><td>07:50</td><td>Sí</td></tr>
+              <tr class="cuerpo"><td>Jugar</td><td>19/09/2025</td><td>08:00</td><td>No</td></tr>
+              <tr class="cuerpo"><td>Llamar a mamá</td><td>20/09/2025</td><td>07:10</td><td>No</td></tr>
+              <tr class="cuerpo"><td>Tomar medicamento</td><td>21/09/2025</td><td>06:55</td><td>Sí</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    
+      <p class="boton-principal-estadisticas subtitulo p2">
+        <a href="reportes.html" style="color: inherit; text-decoration: none;">Volver</a>
+      </p>
+    </div>
+
+  <!-- Script para Chart.js -->
+  <script>
+    const ctx = document.getElementById('frecuenciaAlarmas').getContext('2d');
+    const frecuenciaAlarmas = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['14/09/2025','15/09/2025','16/09/2025','17/09/2025','18/09/2025','19/09/2025','20/09/2025'],
+        datasets: [{
+          label: 'Frecuencia de uso',
+          data: [5,7,3,8,6,4,9],
+          backgroundColor: '#0D3B66'
+        }]
+      },
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: 'Frecuencia de uso de alarmas de la última semana',
+            font: {
+              family: 'Roboto',   
+              size: 24,
+              weight: '600'
+            },
+            color: '#0D3B66'
+          },
+          legend: {
+            display: false, 
+            labels: {
+              font: {
+                family: 'Roboto', 
+                size: 14,
+                weight: '400'
+              },
+              color: '#0D3B66'
+            }
+          },
+          tooltip: {
+            titleFont: {
+              family: 'Roboto', 
+              size: 14,
+              weight: '400'
+            },
+            bodyFont: {
+              family: 'Roboto', 
+              size: 14,
+              weight: '700'
+            }
+          }
+        },
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: 'Fecha',
+              font: {
+                family: 'Roboto',  
+                size: 14,
+                weight: '700'
+              },
+              color: '#0D3B66'
+            },
+            ticks: {
+              font: {
+                family: 'Roboto',  
+                size: 14,
+                weight: '700'
+              },
+              color: '#0D3B66'
+            }
+          },
+          y: {
+            min: 0,
+            max: 10,
+            title: {
+              display: true,
+              text: 'Frecuencia de uso',
+              font: {
+                family: 'Roboto',  
+                size: 14,
+                weight: '700'
+              },
+              color: '#0D3B66'
+            },
+            ticks: {
+              stepSize: 1,
+              font: {
+                family: 'Roboto',  
+                size: 14,
+                weight: '700'
+              },
+              color: '#0D3B66'
+            }
+          }
+        }
+      }
+    });
+  </script>
+  
+</body>
+</html>

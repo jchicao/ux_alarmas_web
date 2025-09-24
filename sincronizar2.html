@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gestor de Alarmas</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/web.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- Barra superior -->
+      <div id="header">
+        <div id="menu">
+          <a href="reportes.html" class="encabezado">Reportes</a>
+          <a href="crear.html" class="encabezado">Crear alarmas</a>
+          <a href="sincronizar.html" class="encabezado">Sincronizar alarmas</a>
+          <a href="control.html" class="encabezado">Control parental</a>
+        </div>
+        <div id="usuario" class="encabezado">Alejandro</div>
+      </div>
+
+      <!-- Contenido -->
+      <div id="contenedor-contenido">
+        <div id="contenedor-sincronizar">
+          <h1 class="subtitulo">
+            Elige las personas a las que deseas realizarle la solicitud
+          </h1>
+
+          <div class="lista-personas">
+            <div class="persona">
+              <div class="avatar cuerpo">L</div>
+              <span class="nombre nota">Luis</span>
+              <input type="checkbox" checked />
+            </div>
+
+            <div class="persona">
+              <div class="avatar cuerpo">F</div>
+              <span class="nombre nota">Fernando</span>
+              <input type="checkbox" checked />
+            </div>
+
+            <div class="persona">
+              <div class="avatar cuerpo">J</div>
+              <span class="nombre nota">Jaime</span>
+              <input type="checkbox" checked />
+            </div>
+          </div>
+
+          <h2 class="boton-principal subtitulo">
+            <a
+              href="sincronizar.html"
+              style="color: inherit; text-decoration: none"
+              >Enviar solicitud</a
+            >
+          </h2>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
