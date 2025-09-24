@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Gestor de Alarmas</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/web.js"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <!-- Barra superior -->
+    <div id="header">
+      <div id="menu">
+        <a href="reportes.html" class="encabezado">Reportes</a>
+        <a href="crear.html" class="encabezado">Crear alarmas</a>
+        <a href="sincronizar.html" class="encabezado">Sincronizar alarmas</a>
+        <a href="control.html" class="encabezado">Control parental</a>
+      </div>
+      <div id="usuario" class="encabezado">Alejandro</div>
+    </div>
+
+    
+    <!-- Contenido -->
+    <div id="contenedor-contenido">
+      <h1 class="subtitulo">El análisis y la visualización de tus datos se encuentran disponibles. ¿Quieres revisarlos?:</h1>
+      <h2 class="boton-principal subtitulo">
+        <a href="estadisticas.html" style="color: inherit; text-decoration: none;">Revisar</a>
+      </h2>
+      <h1 class="titulo">Alarmas establecidas</h1>
+
+      <div id="contenedor-alarmas"></div>
+        <div class="alarma">
+          <span class="nota">Despertar (L, M, V)</span>
+          <span class="cuerpo">6:00 a.m.</span>
+        </div>
+
+        <div class="alarma">
+          <span class="nota">Salir para monitoría de cálculo (V)</span>
+          <span class="cuerpo">8:00 a.m.</span>
+        </div>
+
+        <div class="alarma">
+          <span class="nota">Dormir (L, V)</span>
+          <span class="cuerpo">10:00 p.m.</span>
+        </div>
+
+        <div class="alarma">
+          <span class="nota">Desayunar (L, M, V)</span>
+          <span class="cuerpo">8:00 a.m.</span>
+        </div>
+
+        <div class="alarma">
+          <span class="nota">Salir para monitoría de ux (S)</span>
+          <span class="cuerpo">8:00 a.m.</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
